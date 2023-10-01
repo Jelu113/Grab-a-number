@@ -34,6 +34,10 @@ function generatePassword() {
    if(wantsLower, wantsSymbol, wantsUpper, wantsNumbers === false) {
       return ("Please choose at least one type of character.")
    }
+   if (choices.length === 0) {
+      alert("Please choose a number between 8 and 128.");
+      return ""; 
+    }
 var finalPassword = "";
 for (var i = 0; i < length; i++) {
  var randomNumber = Math.floor(Math.random() * choices.length);
