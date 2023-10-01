@@ -6,6 +6,12 @@ function generatePassword() {
     var numbers = "1234567890".split("");
     var length = prompt("Enter the length of the password (between 8 and 128 characters):");
     length = parseInt(length);
+
+    if (length < 8 || length > 128 || isNaN(length)) {
+      alert("Please enter a valid password length between 8 and 128 characters.");
+      return ""; 
+    }
+
     var wantsLower = confirm("Would you like lower case letters in your password?");
     var wantsUpper = confirm("Would you like upper case letters in your password?");
     var wantsSymbol = confirm("Would you like symbols in your password?");
