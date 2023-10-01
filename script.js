@@ -49,16 +49,16 @@ function generatePassword() {
  
    // Display the generated password
    return finalPassword;
- }
- 
- var generateBtn = document.getElementById("generate");
- 
- function writePassword() {
+}
+
+var generateBtn = document.getElementById("generate");
+
+function writePassword() {
    var password = generatePassword();
    var passwordText = document.getElementById("password");
- 
+
    passwordText.value = password;
- }
- 
- generateBtn.addEventListener("click", writePassword);
- 
+   alert("Generated Password: " + password); // Display the password in an alert
+}
+
+generateBtn.addEventListener("click", writePassword);
